@@ -1,0 +1,14 @@
+indir: ''  # to be overriden in CLI
+outdir: ''  # to be overriden in CLI
+
+model:
+  path: ''  # to be overriden in CLI
+  checkpoint: best.ckpt
+
+dataset:
+  kind: default
+  img_suffix: .png
+  pad_out_to_modulo: 8
+
+device: cpu
+out_key: inpainted
