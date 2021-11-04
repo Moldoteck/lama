@@ -55,13 +55,13 @@ def main():
     final_[final_==1] = 255
     final_ = cv2.resize(final_, (sz[0], sz[1]))
 
-    overlay = without_mask.copy()#do in separate file
-    final3=cv2.cvtColor(final_,cv2.COLOR_GRAY2BGR)
-    overlay[final3==255] = 255
+    # overlay = without_mask.copy()#do in separate file
+    # final3=cv2.cvtColor(final_,cv2.COLOR_GRAY2BGR)
+    # overlay[final3==255] = 255
 
-    result = cv2.addWeighted(overlay, 0.6, without_mask, 1 - 0.6, 0)
-    plt.imsave(f"{path}/{image.split('.')[0]}_confirm.png", result)
-    print('saved confirmation segmentation')
+    # result = cv2.addWeighted(overlay, 0.6, without_mask, 1 - 0.6, 0)
+    # plt.imsave(f"{path}/{image.split('.')[0]}_confirm.png", result)
+    # print('saved confirmation segmentation')
     plt.imsave(f"{out_path}/{image.split('.')[0]}.png", final_, cmap='gray')
     print('saved in '+ f"{path}/{image}.png")
     sys.stdout.flush()
